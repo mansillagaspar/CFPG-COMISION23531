@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+
+    /* FONDO (Cambiarlo a uno tipo pattern) */
+    background-image: url(../IMG/FondoPolka.jpg);
+    background-repeat: repeat;
+    background-position: center;
+
+    /* Fuente */
+    color: #ffffff;
+    font-family: 'Inclusive Sans', sans-serif;
+    
+}
+
+h1{
+    font-size: 50px;
+}
+
+.container-grid{
+    
+    width: 100%;
+    /* max-width: 1024px; */
+    max-width: 100%;
+    margin: 0px auto;
+    display: grid;
+    gap: 30px;
+
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(5, auto);
+
+    grid-template-areas: "header header header"
+                         "content content content"
+                         ".. cursos .."
+                         "guitarra piano bateria"
+                         "footer footer footer";
+}
+
+
+.container-grid > div,
+.container-grid .header,
+.container-grid .content,
+.container-grid .cursos,
+.container-grid .footer {
+    padding: 20px;
+    /* border-radius: 4px; */
+}
+
+.container-grid .header{
+    background: rgb(126, 141, 29);
+    color: #fff;
+    grid-area: header; 
+}
+
+.container-grid .content{
+    background: rgb(69, 12, 17);
+    grid-area: content; 
+}
+
+.container-grid .cursos{
+    background: rgb(234, 234, 234);
+    grid-area: cursos; 
+    color: rgb(88, 55, 75);
+    height: 200px;
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-grid .guitarra,
+.container-grid .piano,
+.container-grid .bateria{
+    background: rgb(69, 12, 17);
+    color: #ffffff;
+    height: 200px;
+    width: 200px;
+    border-radius: 9px;
+
+    /* El display va con grid o flex? */
+    /* display: grid; */
+
+    align-items: center;
+    justify-content: center;
+}
+
+.container-grid .guitarra{
+    grid-area: guitarra;
+    /* align-self: center; */
+    justify-self: center;
+}
+.container-grid .piano{
+    grid-area: piano;
+    /* align-self: center; */
+    justify-self: center; 
+}
+.container-grid .bateria{
+    grid-area: bateria;
+    /* align-self: center; */
+    justify-self: center; 
+}
+.container-grid .footer{
+    background: rgb(159, 159, 159);
+    color: #fff;
+    grid-area: footer; 
+}
